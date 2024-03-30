@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --cor-01: #E3A6F9;
+    --cor-02: #8737A4;
+    --cor-03: #5F147A;
+    --cor-04: #3A004F;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--cor-04);
+    font-family: "Open Sans", sans-serif;
+}
+
+.cabecalho {
+    color: white;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+}
+
+#burger {
+    display: block;
+    text-align: center;
+}
+
+#menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    padding: 10px;
+}
