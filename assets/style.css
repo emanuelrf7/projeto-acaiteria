@@ -14,9 +14,14 @@
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor-04);
     font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
 }
 
 .cabecalho {
@@ -26,25 +31,233 @@ body {
 
 .logo {
     width: 100%;
-}
-
-#burger {
-    display: block;
     text-align: center;
 }
 
+/* #burger {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+} */
+
+/* #burger:hover {
+    background-color: var(--cor-03);
+} */
+
 #menu {
-    display: none;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 25px;
 }
 
-#menu ul {
+#menu ul li {
+    padding: 10px;
+    text-align: center;
     list-style: none;
 }
 
-#menu ul li {
+#menu a {
+    color: var(--cor-01);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menu li:hover {
+    background-color: var(--cor-03);
+    transition: 0.2s;    
+}
+
+#sobrenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    text-align: justify;
+    padding: 5px;
+}
+
+#sobrenos h1 {
+    font-size: 2.5em;
+    color: var(--cor-02);
+}
+
+#sobrenos p {
     padding: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+#secao-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-02);
+    padding: 5px;
+}
+
+#secao-botao h2 {
+    font-size: 2em;
+}
+
+.botao-produtos {
+    width: 150px;
+    color: var(--cor-02);
+    padding: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.botao-produtos:hover {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--cor-03);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    color: var(--cor-01);
+    transition: .2s;
+}
+
+.produtos {
+    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.produtos h3 {
+    color: var(--cor-02);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.produtos p {
+    color: var(--cor-03);
+}
+
+.container-produtos {
+    background-color: white;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.imagem img {
+    width: 250px;
+}
+
+.produtos-personalizados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.produtos-personalizados h4 {
+    color: var(--cor-02);
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-produtos-personalizados {
+    background-color: white;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--cor-03); 
+}
+
+.container-produtos-personalizados details {
+    padding: 10px;
+    text-align: center;
+}
+
+.container-produtos-personalizados summary {
+    margin-bottom: 10px;
+    font-weight: bold;        
+}
+
+.container-produtos-personalizados ul {
+    list-style: none;
+}
+
+.container-produtos-personalizados li {
+    padding: 5px;
+    cursor: default;
+}
+
+.container-produtos-personalizados li:hover {
+    text-shadow: 0.5px 0.5px 1px var(--cor-03);
+    transition: .05s;
+}
+
+#localizacao {
+    text-align: center;
+    height: 100vh;
+    margin-top: 20px;
+    color: var(--cor-02);
+    font-size: 1.8em;
+    padding: 5px;
+}
+
+#localizacao div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--cor-02);
+    height: 100vh;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px; 
+}
+
+#contato h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+#contato a {
+    text-decoration: none;
+    color: white;
+}
+
+.whatsapp, .instagram {
+    width: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s; 
+}
+
+.whatsapp:hover {
+    background-color: #00BC06;
+}
+
+.instagram:hover {
+    background-color: #DD2A7B;
 }
