@@ -25,13 +25,12 @@ body {
 }
 
 .cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    height: 100vh;
-}
-
-.logo {
-    width: 100%;
-    text-align: center;
+    height: 100%;
 }
 
 /* #burger {
@@ -39,18 +38,15 @@ body {
     text-align: center;
     cursor: pointer;
     transition: 0.2s;
-} */
+} 
 
-/* #burger:hover {
+#burger:hover {
     background-color: var(--cor-03);
 } */
 
 #menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 25px;
+    display: block;
+    /* margin-top: 50px; */
 }
 
 #menu ul li {
@@ -62,12 +58,13 @@ body {
 #menu a {
     color: var(--cor-01);
     font-weight: bold;
+    font-size: 1.5em;
     text-decoration: none;
 }
 
 #menu li:hover {
     background-color: var(--cor-03);
-    transition: 0.2s;    
+    transition: ease 0.2s;    
 }
 
 #sobrenos {
@@ -78,6 +75,7 @@ body {
     height: 100vh;
     text-align: justify;
     padding: 5px;
+    margin: 20px 0px;
 }
 
 #sobrenos h1 {
@@ -94,10 +92,12 @@ body {
 #secao-botao {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     color: var(--cor-02);
-    padding: 5px;
+    padding: 10px;
+    height: 100%;
 }
 
 #secao-botao h2 {
@@ -128,11 +128,10 @@ body {
 
 .produtos {
     display: none;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    justify-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 20px;
+    flex-wrap: wrap;
     text-align: center;
 }
 
@@ -149,7 +148,8 @@ body {
 .container-produtos {
     background-color: white;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-    max-width: 250px;
+    max-width: 260px;
+    margin: 10px 0px;
     padding: 10px;
     border-radius: 5px;
 }
@@ -174,12 +174,14 @@ body {
 }
 
 .container-produtos-personalizados {
+    display: block;
+    margin: auto;
     background-color: white;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
     width: 250px;
     padding: 10px;
     border-radius: 5px;
-    color: var(--cor-03); 
+    color: var(--cor-03);
 }
 
 .container-produtos-personalizados details {
@@ -208,11 +210,11 @@ body {
 
 #localizacao {
     text-align: center;
-    height: 100vh;
+    height: 100%;
     margin-top: 20px;
     color: var(--cor-02);
     font-size: 1.8em;
-    padding: 5px;
+    padding: 10px;
 }
 
 #localizacao div {
@@ -222,28 +224,31 @@ body {
     align-items: center;
     overflow: hidden;
     margin-top: 20px;
+    
 }
 
 #contato {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     color: var(--cor-02);
-    height: 100vh;
+    height: 100%;
     text-align: center;
     font-weight: bold;
-    margin-top: 20px; 
+    margin-top: 20px;
+    padding: 10px; 
 }
 
 #contato h2 {
     font-size: 1.8em;
-    text-align: center;
+    text-align: justi;
 }
 
 #contato a {
     text-decoration: none;
     color: white;
+    padding: 10px;
 }
 
 .whatsapp, .instagram {
@@ -260,4 +265,99 @@ body {
 
 .instagram:hover {
     background-color: #DD2A7B;
+}
+
+@media only screen and (min-width: 768px) {
+    .container-produtos-personalizados {
+        width: 400px;
+    }
+    
+    #contato {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .container-contato {
+        display: flex;
+        padding: 20px;
+    }
+
+    .container-contato a {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .cabecalho {
+        display: block;
+    }
+    
+    .container-cabecalho {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #menu a {
+        margin: 0px 10px;
+    }
+
+    .container-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #secao-botao {
+        justify-content: center;
+        height: 100%;
+        margin-bottom: 100px;
+    }
+
+    .container-produtos {
+        max-width: 280px;
+        margin: 10px 0px;
+    }
+
+    .produtos-personalizados h4 {
+        font-size: 1.5em;
+    }
+
+    .container-produtos-personalizados {
+        display: block;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container-menu {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #sobrenos {
+        text-align: center;
+        margin-top: 50px;
+        height: 100%;
+    }
+
+    #sobrenos h1 {
+        font-size: 3em;
+    }
+
+    #secao-botao {
+        margin-top: 100px;
+        height: 100%;
+    }
+
+    #secao-botao h2 {
+        font-size: 2.5em;
+    }
+
+    .produtos-personalizados details {
+        font-size: 1.2em;
+    }
+
+    .produtos-personalizados h4 {
+        font-size: 2em;
+    }
 }
